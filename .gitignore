@@ -1,0 +1,7 @@
+node_modules
+app/images/dest
+app/css/build
+app/css/app.css
+app/css/app.min.css
+app/js/app.min.js
+dist

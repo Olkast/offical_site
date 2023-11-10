@@ -1,0 +1,22 @@
+.burger{
+  &-line-btn {
+    background: #fff;
+    height: 4px;
+    width: 40px;
+  }
+
+  &-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.burger-line-btn:first-child,
+.burger-line-btn:last-child {
+  width: 31px;
+}
+
