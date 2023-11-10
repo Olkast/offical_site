@@ -5,7 +5,8 @@
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp build && gulp deploy"
   },
   "author": "Olga Vagulis",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^7.1.0",
     "gulp-less": "^4.0.1",
     "gulp-newer": "^1.4.0",

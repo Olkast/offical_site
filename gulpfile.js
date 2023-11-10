@@ -24,6 +24,7 @@ const newer = require('gulp-newer');
 const del = require('del');
 // Подключаем модуль gulp-webp
 const webp = require('gulp-webp');
+const ghPages = require('gulp-gh-pages');
 
 // Определяем логику работы Browsersync
 function browsersync() {
@@ -180,6 +181,11 @@ function cleandist() {
     return del('dist/**/*', {force: true}) // Удаляем всё содержимое папки "dist/"
 }
 
+function deploy() {
+    return src('./dist/**/*')
+        .pipe(ghPages());
+}
+
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
 exports.browsersync = browsersync;
 // Экспортируем функцию scripts() в таск scripts
@@ -188,6 +194,8 @@ exports.scripts = scripts;
 exports.styles = styles;
 // Экспорт функции images() в таск images
 exports.images = images;
+// Деплой в githubPages
+exports.deploy = deploy;
 // Экспортируем функцию cleanimg() как таск cleanimg
 exports.cleanimg = cleanimg;
 // Создаём новый таск "build", который последовательно выполняет нужные операции
